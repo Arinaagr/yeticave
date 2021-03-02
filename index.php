@@ -132,6 +132,7 @@ function Price_sum($sum, $withRubleElem)
         </div>
         <ul class="lots__list">
             <?php foreach($data_list as $b=>$val) :?>
+            
             <li class="lots__item lot">
                 <div class="lot__image">
                     <img src="img/lot-<?=($b + 1)?>.jpg" width="350" height="260" alt="<?php $val['name']?>">

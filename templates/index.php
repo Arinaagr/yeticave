@@ -32,7 +32,7 @@
                                 <span class="lot__cost"><?= Price_sum($val['count'], true) ?><b class="rub">р</b></span>
                             </div>
                             <div class="lot__timer timer">
-                                12:23
+                                <?php echo(My_time());?>
                             </div>
                         </div>
                     </div>

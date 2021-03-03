@@ -12,6 +12,18 @@ function compile_template($template, $template_data) {
     }
 }
 
+
+    function My_time()
+    {
+        $now=strtotime('now');
+        $now1=strtotime('tomorrow');
+        $now3=$now1-$now;
+        $hour=floor($now3/3600);
+        $minutes=($now3/3600-$hour)*60;
+        $timer=sprintf('%02d:%02d', $hour, $minutes);
+        return $timer;
+    }
+
 $is_auth = rand(0, 1);
 
 $user_name = 'Arinaagr'; // укажите здесь ваше имя
@@ -77,4 +89,5 @@ function Price_sum($sum, $withRubleElem)
     }
 
 }
+
 ?>

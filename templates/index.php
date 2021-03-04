@@ -29,7 +29,7 @@
                         <div class="lot__state">
                             <div class="lot__rate">
                                 <span class="lot__amount"><?php echo ($val['count']);?></span>
-                                <span class="lot__cost"><?= Price_sum($val['count'], true) ?><b class="rub">р</b></span>
+                                <span class="lot__cost"><?= Price_sum($val['count'], true) ?></span>
                             </div>
                             <div class="lot__timer timer">
                                 <?php echo(My_time());?>

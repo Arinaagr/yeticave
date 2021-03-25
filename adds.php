@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
             "account_id" => $_SESSION['auth']['account_id']
 
         ];
-        $addLotContent = renderTemplate('templates/lotTemplace.php', [
+        $page_content = compile_template('add.php', [
             'lot' => $lot,
             'rates' => [],
             'price' => $lot['start_price']+$lot['rate']
@@ -72,7 +72,8 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
         $sql="INSERT INTO lots(lot_name, lot_description, lot_img, lot_categ_id, lot_first_price, lot_end_date, lot_step, lot_categ_id)
 VALUE ('{$lot['lot_name']}', '{$lot['lot_description']}', '{$lot['lot_img']}', '{$lot['lot_categ_id']}', '{$lot['lot_first_price']}', '{$lot['lot_end_date']}', '{$lot['lot_step']}' , '{$lot['lot_categ_id']}')" ;
         $result=mysqli_query($con,$sql);
-        if(!$result = mysqli_error($con));
+        if(!$result)
+        echo mysqli_error($con);
     }
 }
  else{

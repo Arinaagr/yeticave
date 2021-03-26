@@ -6,6 +6,8 @@ require ('functions.php');
      ['categories_list' => $categories_list,
          'data_list' =>$data_list]);
 
+
+
     $layout_content = compile_template('layout.php',
         ['page_layout'=>'Главная страница',
         'is_auth' => $is_auth,
